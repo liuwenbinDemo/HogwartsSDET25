@@ -37,5 +37,3 @@ def get_add_data(data_path):
         add_data.append(line)
     return add_data
 
-
-
