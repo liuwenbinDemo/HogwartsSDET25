@@ -12,8 +12,8 @@ class Base:
     def teardown_class(self):
         print("【结束测试】")
 
-    def setup(self):
+    def setup_method(self):
         print("【开始计算】")
 
-    def teardown(self):
+    def teardown_method(self):
         print("【结束计算】")
