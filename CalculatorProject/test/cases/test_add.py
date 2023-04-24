@@ -18,7 +18,7 @@ class TestAdd(Base):
         with allure.step(f"计算：{a} + {b}:"):
             result = self.calculator.add(a, b)
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否相等"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             assert result == expected
 
     @allure.story("【正向用例】【P0】浮点数相加")
@@ -31,7 +31,7 @@ class TestAdd(Base):
         with allure.step(f"计算：{a} + {b}:"):
             result = self.calculator.add(a, b)
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否相等"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             assert result == expected
 
     @allure.story("【正向用例】【P0】整数与浮点数相加")
@@ -44,7 +44,7 @@ class TestAdd(Base):
         with allure.step(f"计算：{a} + {b}:"):
             result = self.calculator.add(a, b)
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否相等"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             assert result == expected
 
     @allure.story("【正向用例】【P1】有效边界值相加")
@@ -57,7 +57,7 @@ class TestAdd(Base):
         with allure.step(f"计算：{a} + {b}:"):
             result = self.calculator.add(a, b)
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否相等"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             assert result == expected
 
     @allure.story("【反向用例】【P1】无效边界值相加")
@@ -70,11 +70,12 @@ class TestAdd(Base):
         with allure.step(f"计算：{a} + {b}:"):
             result = self.calculator.add(a, b)
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否相等"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             assert result == expected
 
     @allure.story("【反向用例】【P1】输入中文")
     @allure.title("{title}")
+
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.P1
     @pytest.mark.wrong
@@ -85,7 +86,7 @@ class TestAdd(Base):
                 result = self.calculator.add(a, b)
         except TypeError as e:
             result = "TypeError"
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否一致"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
             assert result == expected
 
@@ -101,7 +102,7 @@ class TestAdd(Base):
                 result = self.calculator.add(a, b)
         except TypeError as e:
             result = "TypeError"
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否一致"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
             assert result == expected
 
@@ -117,7 +118,7 @@ class TestAdd(Base):
                 result = self.calculator.add(a, b)
         except TypeError as e:
             result = "TypeError"
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否一致"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
             assert result == expected
 
@@ -133,7 +134,7 @@ class TestAdd(Base):
                 result = self.calculator.add(a, b)
         except TypeError as e:
             result = "TypeError"
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否一致"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
             assert result == expected
 
@@ -149,6 +150,6 @@ class TestAdd(Base):
                 result = self.calculator.add(a, b)
         except TypeError as e:
             result = "TypeError"
-        with allure.step(f"断言测试结果{result}与预期结果{expected}是否一致"):
+        with allure.step(f"断言测试结果【{result}】与预期结果【{expected}】是否相等"):
             self.log.info(f"计算：{a} + {b}，预期结果：{expected}，实际结果：{result}")
             assert result == expected
